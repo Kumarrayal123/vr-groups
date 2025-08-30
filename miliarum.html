@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR Groups</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h5 {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #222;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #a3683c;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 0;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .navbar .nav-link {
+      color: #333 !important;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+
+    /* .navbar .nav-link:hover {
+      color: #ff6600 !important;
+    } */
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('/images/hero-1.png') top/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .btn-orange {
+      background: #a3683c;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 10px 25px;
+      transition: all 0.3s;
+    }
+
+    .btn-orange:hover {
+      background: #e65c00;
+      transform: translateY(-2px);
+    }
+
+    /* Stats Section */
+    .stats-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .stats-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stats-card h2 {
+      color: #a3683c;
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .stats-card p {
+      margin: 0;
+      color: #555;
+    }
+
+    /* Amenities */
+    .amenities {
+      list-style: none;
+      padding: 0;
+    }
+
+    .amenities li {
+      font-size: 1.05rem;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .amenities li::before {
+      content: "✔";
+      color: #a3683c;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* Gallery */
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Location Section */
+    .location {
+      background:#a3683c;
+      color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .location h2 {
+      color: #fff;
+    }
+
+    .location h5 {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .location p {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #a3683c;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo-removebg-preview.png" alt="Vr Groups Logo" class="logo me-2" style="height:50px;">
+      </a>
+
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="./properties.html">Villas</a></li>
+          <li class="nav-item"><a class="nav-link" href="./plots.html">Plots</a></li>
+          <li class="nav-item"><a class="nav-link" href="./apartments.html">Apartments</a></li>
+        </ul>
+        <!-- Phone -->
+        <a href="tel:+919154954879" class="btn btn-orange ms-lg-3 mt-2 mt-lg-0 d-block d-lg-inline">
+          <i class="bi bi-telephone"></i> +91-9154954879
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content text-center">
+      <h1>FIND YOUR DREAM HOME WITH US</h1>
+      <button class="btn btn-orange btn-lg mt-3">Find Home</button>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+   <!-- Stats Section -->
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Project Stats -->
+<!-- Project Stats -->
+<div class="container my-5">
+  <div class="row g-4 text-center">
+    <div class="col-md-2">
+      <div class="stats-card">
+        <i class="bi bi-tree-fill"></i>
+        <h2>2.5</h2>
+        <p>Acres</p>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="stats-card">
+        <i class="bi bi-building"></i>
+        <h2>1</h2>
+        <p>Tower</p>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="stats-card">
+        <i class="bi bi-building-up"></i>
+        <h2>C+P1+P2+P3+17</h2>
+        <p>Floors</p>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="stats-card">
+        <i class="bi bi-houses"></i>
+        <h2>315</h2>
+        <p>Total Units</p>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="stats-card">
+        <i class="bi bi-house-heart-fill"></i>
+        <h2>3 & 4</h2>
+        <p>BHK Flats</p>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="stats-card">
+        <i class="bi bi-building-gear"></i>
+        <h2>1</h2>
+        <p>Clubhouse</p>
+      </div>
+    </div>
+
+    <div class="col-md-12 mt-3">
+      <div class="stats-card">
+        <i class="bi bi-graph-up-arrow"></i>
+        <h2>–</h2>
+        <p>Total sft</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Indoor Amenities -->
+<div class="container my-5">
+  <h2 class="section-title">Indoor Amenities</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="amenities">
+        <li>Gymnasium</li>
+        <li>Yoga Pavilion</li>
+        <li>Indoor Games</li>
+        <li>Library</li>
+        <li>Home Theatre</li>
+        <li>Creche</li>
+        <li>Cafeteria</li>
+        <li>WiFi</li>
+        <li>Work Station</li>
+        <li>Maintenance Staff</li>
+        <li>Intercom</li>
+        <li>Controlled Entry & Exit</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul class="amenities">
+        <li>24hr Backup Electricity</li>
+        <li>Multi-Purpose Hall</li>
+        <li>Security</li>
+        <li>Club House</li>
+        <li>State-of-the-Art Club House</li>
+        <li>Mini Theatre</li>
+        <li>Multi-purpose Hall</li>
+        <li>Indoor Games</li>
+        <li>Library/Reading Lounge</li>
+        <li>Co-working Space</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Outdoor Amenities -->
+  <h2 class="section-title mt-5">Outdoor Amenities</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="amenities">
+        <li>Landscape Garden</li>
+        <li>Swimming Pool</li>
+        <li>Basketball Court</li>
+        <li>Terrace Party Pad</li>
+        <li>Pet Park</li>
+        <li>Rainwater Harvesting</li>
+        <li>Gazebos & Seating Zones</li>
+        <li>Cricket Practice Nets</li>
+        <li>EV Charging Station</li>
+        <li>Outdoor Seating Lounge</li>
+        <li>Party Lawn</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul class="amenities">
+        <li>Outdoor Sports Facilities</li>
+        <li>Outdoor Cricket Net Practice</li>
+        <li>Outdoor Yoga Zone</li>
+        <li>Kids Play Court</li>
+        <li>Outdoor Gym</li>
+        <li>Outdoor Curved Seating Area</li>
+        <li>Terrace Interactive Court</li>
+        <li>Bar & Barbeque</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Location Highlights -->
+<div class="container my-5">
+  <div class="location">
+    <h2 class="section-title text-white">Location Highlights</h2>
+
+    <h4 class="mt-3">Distance from Our Projects</h4>
+    <p>Wipro Junction – 15Min – 14KM | Patancheru – 15Min – 9KM</p>
+    <p>Tellapur – 5Min – 4.5KM | Hitech City – 35Min – 25KM</p>
+    <p>Gachibowli – 15Min – 13KM | Financial Dist – 10Min – 10KM</p>
+    <p>Airport – 35Min – 35KM | Lingampalli Railway Station – 15Min</p>
+
+    <h4 class="mt-3">Schools</h4>
+    <p>Gaudium International School – 3Min – Velimala</p>
+    <p>Samishti International School – 5Min – Kollur</p>
+    <p>Delhi Public School – 10Min – Kollur | Meru International School – 10Min – Tellapur</p>
+    <p>Manthan International School – 10Min – Tellapur</p>
+    <p>Sancta Maria International School – 10Min – Tellapur</p>
+    <p>Sadhana Infinity International School – 15Min – Tellapur</p>
+    <p>Abode International School – 15Min – Tellapur</p>
+    <p>Epistemo International School – 15Min – Tellapur</p>
+    <p>Birla Open Minds – 15Min – Tellapur</p>
+    <p>Vista International School – 15Min – Tellapur</p>
+    <p>Enriching Minds PRC School – 15Min – Tellapur</p>
+    <p>SLOKA International School – 15Min – Tellapur</p>
+
+    <h4 class="mt-3">Hospitals</h4>
+    <p>Star Hospital – 15Min – 10KM</p>
+    <p>Rainbow Hospital – 15Min – 10KM</p>
+    <p>KIMS at Gachibowli – 20Min – 16KM</p>
+    <p>AIG at Gachibowli – 25Min – 13KM</p>
+    <p>Continental Hospital at Gachibowli – 25Min – 13KM</p>
+
+    <h4 class="mt-3">Malls</h4>
+    <p>Inorbit Mall – 35Min</p>
+    <p>Aparna Mall, Nallagandla – 15Min</p>
+    <p>Sharath City Mall/AMB – 30Min</p>
+    <p>Arena Mall – 30Min</p>
+
+    <h4 class="mt-3">Others</h4>
+    <p>ORR Exit: 5 Min | Neopolis: 10 Min</p>
+    <p>Financial District: 15 Min</p>
+    <p>Airport: 35 Min</p>
+    <p>Nagalapalli Railway Station: 5 Min</p>
+  </div>
+</div>
+
+
+
+ 
+
+  <!-- Footer -->
+ <div class="site-footer bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- Contact -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="widget">
+            <h3 style="color: #d9a97c;" class="footer-heading">Contact</h3>
+            <address class="mb-3">Hyderabad, Telangana, India</address>
+            <ul class="list-unstyled">
+              <li><a href="tel:+919154954879" class="text-light">+91-91549 54879</a></li>
+              <li><a href="tel:+919948454549" class="text-light">+91-99484 54549</a></li>
+              <li><a href="mailto:vydikreyangroup@gmail.com" class="text-light">vydikreyangroup@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="widget">
+            <h3 style="color: #d9a97c;" class="footer-heading">Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Home</a></li>
+              <li><a href="#" class="text-light">Villas</a></li>
+              <li><a href="#" class="text-light">Plots</a></li>
+              <li><a href="#" class="text-light">Apartments</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="col-lg-4">
+          <div class="widget">
+            <h3 style="color: #d9a97c;" class="footer-heading">Follow Us</h3>
+            <ul class="list-inline mt-3">
+              <li class="list-inline-item"><a href="#"><span class="icon-instagram"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-pinterest"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-dribbble"></span></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+      <!-- Copyright -->
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <p class="mb-0 small">
+            &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            All Rights Reserved. — <strong>VR Groups</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
