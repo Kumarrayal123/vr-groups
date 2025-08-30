@@ -3,502 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VR Groups</title>
+  <title>VR Groups - Services</title>
+  <link rel="shortcut icon" href="images/logo-removebg-preview.png" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    /* Global Styles */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    h1, h2, h5 {
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      color: #222;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 4px;
-      background: #a3683c;
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
-
-    /* Navbar */
-    .navbar {
-      padding: 1rem 0;
-      transition: background 0.3s, box-shadow 0.3s;
-    }
-
-    .navbar .nav-link {
-      color: #333 !important;
-      font-weight: 500;
-      margin: 0 10px;
-    }
-
-    /* .navbar .nav-link:hover {
-      color: #ff6600 !important;
-    } */
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      background: url('/images/hero-1.png') top/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .btn-orange {
-      background: #a3683c;
-      color: #fff;
-      font-weight: 600;
-      border-radius: 30px;
-      padding: 10px 25px;
-      transition: all 0.3s;
-    }
-
-    .btn-orange:hover {
-      background: #e65c00;
-      transform: translateY(-2px);
-    }
-
-    /* Stats Section */
-    .stats-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-
-    .stats-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .stats-card h2 {
-      color: #a3683c;
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
-
-    .stats-card p {
-      margin: 0;
-      color: #555;
-    }
-
-    /* Amenities */
-    .amenities {
-      list-style: none;
-      padding: 0;
-    }
-
-    .amenities li {
-      font-size: 1.05rem;
-      margin: 8px 0;
-      display: flex;
-      align-items: center;
-    }
-
-    .amenities li::before {
-      content: "✔";
-      color: #a3683c;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    /* Gallery */
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-
-    /* Location Section */
-    .location {
-      background:#a3683c;
-      color: #fff;
-      padding: 40px;
-      border-radius: 12px;
-    }
-
-    .location h2 {
-      color: #fff;
-    }
-
-    .location h5 {
-      margin-top: 20px;
-      font-weight: 600;
-    }
-
-    .location p {
-      margin-bottom: 10px;
-    }
-
-    /* Footer */
-    footer {
-      background: #222;
-      color: #ddd;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #a3683c;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="services.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="images/logo-removebg-preview.png" alt="Vr Groups Logo" class="logo me-2" style="height:50px;">
-      </a>
 
-      <!-- Mobile Toggle Button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <!-- Navbar Links -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="./properties.html">Villas</a></li>
-          <li class="nav-item"><a class="nav-link" href="./plots.html">Plots</a></li>
-          <li class="nav-item"><a class="nav-link" href="./apartments.html">Apartments</a></li>
-        </ul>
-        <!-- Phone -->
-        <a href="tel:+919154954879" class="btn btn-orange ms-lg-3 mt-2 mt-lg-0 d-block d-lg-inline">
-          <i class="bi bi-telephone"></i> +91-9154954879
-        </a>
+  <!-- Stats Section -->
+  <div class="container my-5">
+    <div class="row g-4 text-center">
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-tree-fill"></i>
+          <h2>2</h2>
+          <p>Acres</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-building"></i>
+          <h2>1</h2>
+          <p>Tower</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-building-up"></i>
+          <h2>17</h2>
+          <p>Floors</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-houses"></i>
+          <h2>230</h2>
+          <p>Total Units</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-house-heart-fill"></i>
+          <h2>2 & 3</h2>
+          <p>BHK Flats</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-building-gear"></i>
+          <h2>15000</h2>
+          <p>sqft Clubhouse</p>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <div class="stats-card">
+          <i class="bi bi-graph-up-arrow"></i>
+          <h2>4,00,190</h2>
+          <p>Total sft</p>
+        </div>
       </div>
     </div>
-  </nav>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content text-center">
-      <h1>FIND YOUR DREAM HOME WITH US</h1>
-      <button class="btn btn-orange btn-lg mt-3">Find Home</button>
+  <!-- Gallery Section -->
+  <section class="gallery py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Project Gallery</h2>
+      <div class="row g-4 justify-content-center text-center">
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery1.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery2.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery3.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery4.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery5.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery6.jpg" class="img-fluid rounded shadow"></div>
+      </div>
     </div>
   </section>
 
-  <!-- Stats Section -->
-   <!-- Stats Section -->
-<!-- Bootstrap Icons CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-<div class="container my-5">
-  <div class="row g-4 text-center">
-    <div class="col-md-2">
-      <div class="stats-card">
-        <i class="bi bi-tree-fill"></i>
-        <h2>2</h2>
-        <p>Acres</p>
+  <!-- Amenities Section -->
+  <div class="container my-5">
+    <h2 class="section-title">Indoor Amenities</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="amenities">
+          <li>Gymnasium</li><li>Yoga Pavilion</li><li>Indoor Games</li><li>Library / Reading Lounge</li>
+          <li>Home Theatre</li><li>Creche</li><li>Cafeteria</li><li>WiFi</li>
+          <li>Work Station</li><li>Intercom / Controlled Entry</li><li>24hr Backup Electricity</li><li>Security</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="amenities">
+          <li>Club House</li><li>State-of-the-Art Club House</li><li>Mini Theatre</li>
+          <li>Multi-purpose Hall</li><li>Indoor Games</li><li>Library / Reading Lounge</li><li>Co-working Space</li>
+        </ul>
       </div>
     </div>
 
-    <div class="col-md-2">
-      <div class="stats-card">
-        <i class="bi bi-building"></i>
-        <h2>1</h2>
-        <p>Tower</p>
+    <h2 class="section-title mt-5">Outdoor Amenities</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="amenities">
+          <li>Landscape Garden</li><li>Swimming Pool</li><li>Basketball Court</li><li>Terrace Party Pad</li>
+          <li>Pet Park</li><li>Rainwater Harvesting</li><li>Gazebos & Seating Zones</li><li>Cricket Practice Nets</li>
+          <li>EV Charging Station</li><li>Outdoor Seating Lounge</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="stats-card">
-        <i class="bi bi-building-up"></i>
-        <h2>17</h2>
-        <p>Floors</p>
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="stats-card">
-        <i class="bi bi-houses"></i>
-        <h2>230</h2>
-        <p>Total Units</p>
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="stats-card">
-        <i class="bi bi-house-heart-fill"></i>
-        <h2>2 & 3</h2>
-        <p>BHK Flats</p>
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="stats-card">
-        <i class="bi bi-building-gear"></i>
-        <h2>15000</h2>
-        <p>sqft Clubhouse</p>
-      </div>
-    </div>
-
-    <div class="col-md-12 mt-3">
-      <div class="stats-card">
-        <i class="bi bi-graph-up-arrow"></i>
-        <h2>4,00,190</h2>
-        <p>Total sft</p>
+      <div class="col-md-6">
+        <ul class="amenities">
+          <li>Party Lawn</li><li>Outdoor Sports Facilities</li><li>Outdoor Cricket Net</li>
+          <li>Outdoor Yoga Zone</li><li>Kids Play Court</li><li>Outdoor Gym</li>
+          <li>Covered Seating Area</li><li>Terrace Interactive Court</li><li>Bar & Barbeque</li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
 
-<section class="gallery py-5">
-  <div class="container">
-    <div class="row g-4 justify-content-center text-center">
-      <!-- Image 1 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-        <div class="gallery-card">
-          <img src="images/gallery1.jpg" alt="Gallery Image 1" class="img-fluid rounded shadow">
-        </div>
-      </div>
-      <!-- Image 2 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-        <div class="gallery-card">
-          <img src="images/gallery2.jpg" alt="Gallery Image 2" class="img-fluid rounded shadow">
-        </div>
-      </div>
-      <!-- Image 3 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-        <div class="gallery-card">
-          <img src="images/gallery3.jpg" alt="Gallery Image 3" class="img-fluid rounded shadow">
-        </div>
-      </div>
-      <!-- Image 4 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-        <div class="gallery-card">
-          <img src="images/gallery4.jpg" alt="Gallery Image 4" class="img-fluid rounded shadow">
-        </div>
-      </div>
-      <!-- Image 5 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-        <div class="gallery-card">
-          <img src="images/gallery5.jpg" alt="Gallery Image 5" class="img-fluid rounded shadow">
-        </div>
-      </div>
-      <!-- Image 6 -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-        <div class="gallery-card">
-          <img src="images/gallery6.jpg" alt="Gallery Image 6" class="img-fluid rounded shadow">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Amenities -->
-<div class="container my-5">
-  <h2 class="section-title">Indoor Amenities</h2>
-  <div class="row">
-    <div class="col-md-6">
-      <ul class="amenities">
-        <li>Gymnasium</li>
-        <li>Yoga Pavilion</li>
-        <li>Indoor Games</li>
-        <li>Library / Reading Lounge</li>
-        <li>Home Theatre</li>
-        <li>Creche</li>
-        <li>Cafeteria</li>
-        <li>WiFi</li>
-        <li>Work Station</li>
-        <li>Intercom / Controlled Entry & Exit</li>
-        <li>24hr Backup Electricity</li>
-        <li>Security</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <ul class="amenities">
-        <li>Club House</li>
-        <li>State-of-the-Art Club House</li>
-        <li>Mini Theatre</li>
-        <li>Multi-purpose Hall</li>
-        <li>Indoor Games</li>
-        <li>Library / Reading Lounge</li>
-        <li>Co-working Space</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2 class="section-title mt-5">Outdoor Amenities</h2>
-  <div class="row">
-    <div class="col-md-6">
-      <ul class="amenities">
-        <li>Landscape Garden</li>
-        <li>Swimming Pool</li>
-        <li>Basketball Court</li>
-        <li>Terrace Party Pad</li>
-        <li>Pet Park</li>
-        <li>Rainwater Harvesting</li>
-        <li>Gazebos & Seating Zones</li>
-        <li>Cricket Practice Nets</li>
-        <li>EV Charging Station</li>
-        <li>Outdoor Seating Lounge</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <ul class="amenities">
-        <li>Party Lawn</li>
-        <li>Outdoor Sports Facilities</li>
-        <li>Outdoor Cricket Net Practice</li>
-        <li>Outdoor Yoga Zone</li>
-        <li>Kids Play Court</li>
-        <li>Outdoor Gym</li>
-        <li>Outdoor Covered Seating Area</li>
-        <li>Terrace Interactive Court</li>
-        <li>Bar & Barbeque</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Location Highlights -->
-<div class="container my-5">
-  <div class="location">
+  <!-- Location Highlights -->
+  <div class="container my-5 location">
     <h2 class="section-title text-white">Location Highlights</h2>
-
     <h5>Distance from Our Projects</h5>
     <p>Wipro Junction – 15 Min – 14 KM | Patancheru – 15 Min – 9 KM | Tellapur – 5 Min – 4.5 KM | Hitech City – 35 Min – 25 KM | Gachibowli – 15 Min – 13 KM | Financial Dist. – 10 Min – 10 KM | Airport – 35 Min | Lingampalli Railway Station – 15 Min</p>
-
     <h5>Schools</h5>
-    <p>Gaudium International School – 3 Min – Velimela | Samishti International School – 5 Min – Kollur | Delhi Public School – 10 Min – Kollur | Niraj International School – 10 Min – Tellapur | Manthan International School – 10 Min – Tellapur | Glendale International School – 15 Min – Tellapur | Sancta Maria International School – 15 Min – Tellapur | Birla Open Minds – 15 Min – Tellapur | Arbor International School – 15 Min – Tellapur | Kidz International School – 15 Min – Tellapur | Bachpan International School – 15 Min – Tellapur | Enriching Minds Pre School – 15 Min – Tellapur | Abode International School – 15 Min – Tellapur</p>
-
+    <p>Gaudium International – 3 Min | Samishti International – 5 Min | Delhi Public School – 10 Min | Niraj International – 10 Min | Manthan International – 10 Min | Glendale – 15 Min | Sancta Maria – 15 Min | Birla Open Minds – 15 Min | Arbor International – 15 Min</p>
     <h5>Hospitals</h5>
-    <p>Star Hospital – 15 Min – 10 KM | Aster Hospital – 15 Min – 10 KM | KIMS – 20 Min – 16 KM | Continental Hospital – 25 Min – 13 KM</p>
-
+    <p>Star Hospital – 15 Min | Aster Hospital – 15 Min | KIMS – 20 Min | Continental Hospital – 25 Min</p>
     <h5>Malls</h5>
-    <p>Inorbit Mall: 35 mins | GVK One: 35 mins | Sarath City Mall: 30 mins | Atrium Mall: 30 mins</p>
-
+    <p>Inorbit Mall – 35 Min | GVK One – 35 Min | Sarath City Mall – 30 Min | Atrium Mall – 30 Min</p>
     <h5>Others</h5>
-    <p>ORR Exit: 5 mins | Neopolis: 10 mins | Financial District: 15 mins | Nagolepalli Railway Station: 5 mins</p>
+    <p>ORR Exit – 5 Min | Neopolis – 10 Min | Financial District – 15 Min | Nagolepalli Railway Station – 5 Min</p>
   </div>
-</div>
-
- 
 
   <!-- Footer -->
- <div class="site-footer bg-dark text-light py-5">
+  <footer class="footer py-4 text-center">
     <div class="container">
-      <div class="row">
-
-        <!-- Contact -->
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="widget">
-            <h3 style="color: #d9a97c;" class="footer-heading">Contact</h3>
-            <address class="mb-3">Hyderabad, Telangana, India</address>
-            <ul class="list-unstyled">
-              <li><a href="tel:+919154954879" class="text-light">+91-91549 54879</a></li>
-              <li><a href="tel:+919948454549" class="text-light">+91-99484 54549</a></li>
-              <li><a href="mailto:vydikreyangroup@gmail.com" class="text-light">vydikreyangroup@gmail.com</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="widget">
-            <h3 style="color: #d9a97c;" class="footer-heading">Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-light">Home</a></li>
-              <li><a href="#" class="text-light">Villas</a></li>
-              <li><a href="#" class="text-light">Plots</a></li>
-              <li><a href="#" class="text-light">Apartments</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Social Links -->
-        <div class="col-lg-4">
-          <div class="widget">
-            <h3 style="color: #d9a97c;" class="footer-heading">Follow Us</h3>
-            <ul class="list-inline mt-3">
-              <li class="list-inline-item"><a href="#"><span class="icon-instagram"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="icon-linkedin"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="icon-pinterest"></span></a></li>
-              <li class="list-inline-item"><a href="#"><span class="icon-dribbble"></span></a></li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-      <!-- /.row -->
-
-      <!-- Copyright -->
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <p class="mb-0 small">
-            &copy;
-            <script>document.write(new Date().getFullYear());</script>
-            All Rights Reserved. — <strong>VR Groups</strong>
-          </p>
-        </div>
-      </div>
+      <p class="mb-0">&copy; 2025 VR Groups. All Rights Reserved.</p>
     </div>
-  </div>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
