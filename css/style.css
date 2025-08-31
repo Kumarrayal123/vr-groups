@@ -10428,8 +10428,8 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
-  background: url('/images/hero_bg_3.jpg') center center/cover no-repeat;
+  min-height: 100vh; /* fixes mobile issues */
+  background: url('../images/hero_bg_3.jpg') center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10446,6 +10446,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .hero h1 {
   font-size: 3rem;
   font-weight: bold;
