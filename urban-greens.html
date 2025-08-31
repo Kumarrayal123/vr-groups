@@ -1,19 +1,52 @@
+<!-- /*
+* Template Name: Property
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VR Groups</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Untree.co" />
+  <link rel="shortcut icon" href="./images/logo-removebg-preview.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- your external css -->
 
- 
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap5" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+  <link rel="stylesheet" href="css/tiny-slider.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>VR | Groups</title>
 </head>
-<body>
 
-  <!-- Navbar -->
+<body>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+  
+    <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-sm">
     <div class="container">
       <!-- Logo -->
@@ -49,95 +82,138 @@
     </div>
   </section>
 
+    
   <!-- Stats Section -->
   <div class="container my-5">
     <div class="row g-4 text-center">
-      <div class="col-md-2"><div class="stats-card"><i class="bi bi-tree-fill"></i><h2>10.9</h2><p>Acres</p></div></div>
-      <div class="col-md-2"><div class="stats-card"><i class="bi bi-building"></i><h2>G+2</h2><p>Floors</p></div></div>
-      <div class="col-md-2"><div class="stats-card"><i class="bi bi-houses"></i><h2>100</h2><p>Total Units</p></div></div>
-      <div class="col-md-2"><div class="stats-card"><i class="bi bi-house-heart-fill"></i><h2>2 & 3</h2><p>BHK Triplex Villas</p></div></div>
-      <div class="col-md-2"><div class="stats-card"><i class="bi bi-building-gear"></i><h2>1</h2><p>Clubhouse</p></div></div>
-      <div class="col-md-2"><div class="stats-card"><i class="bi bi-graph-up-arrow"></i><h2>–</h2><p>Total sft</p></div></div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-tree-fill"></i>
+          <h2>2</h2>
+          <p>Acres</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-building"></i>
+          <h2>1</h2>
+          <p>Tower</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-building-up"></i>
+          <h2>17</h2>
+          <p>Floors</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-houses"></i>
+          <h2>230</h2>
+          <p>Total Units</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-house-heart-fill"></i>
+          <h2>2 & 3</h2>
+          <p>BHK Flats</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <div class="stats-card">
+          <i class="bi bi-building-gear"></i>
+          <h2>15000</h2>
+          <p>sqft Clubhouse</p>
+        </div>
+      </div>
+      <div class="col-12 mt-3">
+        <div class="stats-card">
+          <i class="bi bi-graph-up-arrow"></i>
+          <h2>4,00,190</h2>
+          <p>Total sft</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Amenities -->
+  <!-- Gallery Section -->
+  <section class="gallery py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Project Gallery</h2>
+      <div class="row g-4 justify-content-center text-center">
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery1.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery2.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery3.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery4.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery5.jpg" class="img-fluid rounded shadow"></div>
+        <div class="col-12 col-sm-6 col-lg-4"><img src="images/gallery6.jpg" class="img-fluid rounded shadow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
   <div class="container my-5">
-    <h2 class="section-title">Amenities</h2>
+    <h2 class="section-title">Indoor Amenities</h2>
     <div class="row">
       <div class="col-md-6">
         <ul class="amenities">
-          <li>Pergola park entry</li><li>Lotus Pond</li><li>Rock Garden with Sculpture</li>
-          <li>Stage with Party Lawn</li><li>Jogging Pathway</li><li>Outdoor Gym</li>
-          <li>Gazebos with Water Body</li><li>Connecting Bridge with Island</li>
-          <li>Children’s Play Area</li><li>Amphitheater</li>
+          <li>Gymnasium</li><li>Yoga Pavilion</li><li>Indoor Games</li><li>Library / Reading Lounge</li>
+          <li>Home Theatre</li><li>Creche</li><li>Cafeteria</li><li>WiFi</li>
+          <li>Work Station</li><li>Intercom / Controlled Entry</li><li>24hr Backup Electricity</li><li>Security</li>
         </ul>
       </div>
       <div class="col-md-6">
         <ul class="amenities">
-          <li>Screen Wall with Climbing Features</li><li>Kids Play Area</li>
-          <li>Yoga</li><li>Meditation Lawn</li><li>Mound with Specimen Trees</li>
+          <li>Club House</li><li>State-of-the-Art Club House</li><li>Mini Theatre</li>
+          <li>Multi-purpose Hall</li><li>Indoor Games</li><li>Library / Reading Lounge</li><li>Co-working Space</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title mt-5">Outdoor Amenities</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="amenities">
+          <li>Landscape Garden</li><li>Swimming Pool</li><li>Basketball Court</li><li>Terrace Party Pad</li>
+          <li>Pet Park</li><li>Rainwater Harvesting</li><li>Gazebos & Seating Zones</li><li>Cricket Practice Nets</li>
+          <li>EV Charging Station</li><li>Outdoor Seating Lounge</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="amenities">
+          <li>Party Lawn</li><li>Outdoor Sports Facilities</li><li>Outdoor Cricket Net</li>
+          <li>Outdoor Yoga Zone</li><li>Kids Play Court</li><li>Outdoor Gym</li>
+          <li>Covered Seating Area</li><li>Terrace Interactive Court</li><li>Bar & Barbeque</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Project Highlights -->
-  <div class="container my-5">
-    <h2 class="section-title">Project Highlights</h2>
-    <ul class="amenities">
-      <li>Club House</li><li>World Class Amenities</li><li>60% open area with Trees and Plants</li>
-      <li>Rainwater Harvesting</li><li>Gym</li>
-      <li>100 Feet Road Access Beside ORR Exit No:2 Service Road</li>
-      <li>Gated Community with 24x7 Security</li><li>Premium Interiors with Branded Fittings</li>
-      <li>100% Vaastu – Compliant Homes</li><li>Swimming Pool</li>
-      <li>Children’s Play Area</li><li>High-Speed Lifts</li>
-      <li>Power Backup</li><li>Ample Car Parking & Visitor Parking</li>
-    </ul>
-  </div>
-
   <!-- Location Highlights -->
-  <div class="container my-5">
-    <div class="location">
-      <h2 class="section-title text-white bg-dark p-2 rounded">Location Highlights</h2>
-
-      <h4 class="mt-3">Distance from Our Projects</h4>
-      <p>Wipro Junction – 15Min – 10KM | Financial Dist – 15Min – 15KM</p>
-      <p>Gachibowli – 15Min – 15KM | Hitech City – 25Min – 20KM</p>
-      <p>Lingampalli Railway Station – 15Min</p>
-      <p>Patancheru – 15Min – 9KM | Tellapur – 5Min – 4KM</p>
-      <p>Airport – 35Min – 40KM | Kokapet – 15Min – 12KM</p>
-      <p>Neopolis – 10Min – 10KM | BHEL – 15Min – 9KM</p>
-
-      <h4 class="mt-3">Hospitals</h4>
-      <p>Star Hospital – 15Min – 10KM | Continental Hospital – 25Min – 13KM</p>
-      <p>Rainbow Hospital – 15Min – 10KM | KIMS at Gachibowli – 20Min – 16KM</p>
-      <p>AIG at Gachibowli – 25Min – 13KM</p>
-
-      <h4 class="mt-3">Schools</h4>
-      <p>Gaudium International School – 5Min – Velimala</p>
-      <p>Samishti International School – 5Min – Kollur</p>
-      <p>Delhi Public School – 10Min – Nallagandla | Manthan International School – 10Min – Tellapur</p>
-      <p>Bharatiya Vidya Bhavan School – 15Min – BHEL | Sancta Maria International School – 15Min – Lingampalli</p>
-      <p>Rockwell International School – 15Min – Kokapet | Phoenix Greens – 15Min – Kokapet</p>
-      <p>Silver Oaks International School – 15Min – Bachupally</p>
-      <p>Birla Open Minds – 15Min – Tellapur | Vista International School – 15Min – Tellapur</p>
-      <p>Kensri International SPR School – 15Min – Tellapur</p>
-
-      <h4 class="mt-3">Malls</h4>
-      <p>Inorbit Mall – 25Min | Aparna Mall, Nallagandla – 15Min</p>
-      <p>Sharat City Mall – 30Min | GSM Mall – 30Min</p>
-
-      <h4 class="mt-3">Others</h4>
-      <p>ORR Exit – 5Min | Neopolis – 10Min</p>
-      <p>Airport – 35Min | Nagulapalli Railway Station – 5Min</p>
-    </div>
+  <div class="container my-5 location">
+    <h2 class="section-title text-white">Location Highlights</h2>
+    <h5>Distance from Our Projects</h5>
+    <p>Wipro Junction – 15 Min – 14 KM | Patancheru – 15 Min – 9 KM | Tellapur – 5 Min – 4.5 KM | Hitech City – 35 Min – 25 KM | Gachibowli – 15 Min – 13 KM | Financial Dist. – 10 Min – 10 KM | Airport – 35 Min | Lingampalli Railway Station – 15 Min</p>
+    <h5>Schools</h5>
+    <p>Gaudium International – 3 Min | Samishti International – 5 Min | Delhi Public School – 10 Min | Niraj International – 10 Min | Manthan International – 10 Min | Glendale – 15 Min | Sancta Maria – 15 Min | Birla Open Minds – 15 Min | Arbor International – 15 Min</p>
+    <h5>Hospitals</h5>
+    <p>Star Hospital – 15 Min | Aster Hospital – 15 Min | KIMS – 20 Min | Continental Hospital – 25 Min</p>
+    <h5>Malls</h5>
+    <p>Inorbit Mall – 35 Min | GVK One – 35 Min | Sarath City Mall – 30 Min | Atrium Mall – 30 Min</p>
+    <h5>Others</h5>
+    <p>ORR Exit – 5 Min | Neopolis – 10 Min | Financial District – 15 Min | Nagolepalli Railway Station – 5 Min</p>
   </div>
 
-  <!-- Footer -->
-  <div class="site-footer bg-dark text-light py-5">
+
+
+
+ 
+    <div class="site-footer bg-dark text-light py-5">
     <div class="container">
       <div class="row">
+
         <!-- Contact -->
         <div class="col-lg-4 mb-4 mb-lg-0">
           <div class="widget">
@@ -150,6 +226,7 @@
             </ul>
           </div>
         </div>
+
         <!-- Quick Links -->
         <div class="col-lg-4 mb-4 mb-lg-0">
           <div class="widget">
@@ -162,33 +239,58 @@
             </ul>
           </div>
         </div>
+
         <!-- Social Links -->
         <div class="col-lg-4">
           <div class="widget">
             <h3 style="color: #d9a97c;" class="footer-heading">Follow Us</h3>
             <ul class="list-inline mt-3">
-              <li class="list-inline-item"><a href="#"><i class="bi bi-instagram text-light"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="bi bi-twitter text-light"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="bi bi-facebook text-light"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="bi bi-linkedin text-light"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="bi bi-pinterest text-light"></i></a></li>
-              <li class="list-inline-item"><a href="#"><i class="bi bi-dribbble text-light"></i></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-instagram"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-pinterest"></span></a></li>
+              <li class="list-inline-item"><a href="#"><span class="icon-dribbble"></span></a></li>
             </ul>
           </div>
         </div>
+
       </div>
+      <!-- /.row -->
+
       <!-- Copyright -->
       <div class="row mt-5">
         <div class="col-12 text-center">
           <p class="mb-0 small">
-            &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved. — <strong>VR Groups</strong>
+            &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            All Rights Reserved. — <strong>VR Groups</strong>
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS for underline & styling -->
+ 
+
+
+  <!-- /.site-footer -->
+
+  <!-- Preloader -->
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/custom.js"></script>
 </body>
+
 </html>
