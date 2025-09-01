@@ -10888,6 +10888,145 @@ body {
   color: #d9a97c;
 }
 
+.services-flex {
+  display: flex;
+  flex-direction: row; /* all cards in a row */
+  flex-wrap: wrap;     /* wrap to next line if screen is small */
+  gap: 20px;           /* space between cards */
+  justify-content: center; /* center cards in the row */
+}
+
+.service-card {
+  position: relative;
+  flex: 1 1 200px; /* flexible width, min 200px */
+  max-width: 220px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.service-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.service-title {
+  position: absolute;
+  /* bottom: 20px; */
+  /* left: 20px; */
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.partners {
+  background: #f5faff;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-title h4 {
+  color: #2c7a73;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+.section-title h4::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: #ff8c08;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.section-title h2 {
+  margin-top: 12px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+.carousel-container {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 220px;
+  margin: 0 12px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+/* continuous scroll */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 160px;
+    padding: 20px;
+  }
+}
+
+.custom-btn {
+  background-color:#005555; /* initial color */
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #d9a97c !important; /* override Bootstrap */
+  color: #fff;
+}
+
+
 
     
     
