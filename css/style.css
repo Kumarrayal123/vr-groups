@@ -3371,7 +3371,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #00204a;
+  /* color: #00204a; */
   text-decoration: none;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -10404,9 +10404,12 @@ body {
   color: #d9a97c !important;
   margin-right: 15px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 20px
   
-  
+}
+
+.nav-link:hover {
+  color: #005555 !important;
 }
 
 .nav-link.active {
