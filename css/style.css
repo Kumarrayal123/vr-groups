@@ -10437,7 +10437,7 @@ body {
 .hero {
   position: relative;
   min-height: 100vh; /* fixes mobile issues */
-  background: url('../images/hero_bg_3.jpg') center center/cover no-repeat;
+  /* background: url('../images/hero_bg_3.jpg') center center/cover no-repeat; */
   display: flex;
   align-items: center;
   justify-content: center;
