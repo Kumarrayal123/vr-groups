@@ -10390,8 +10390,8 @@ body {
 /* Navbar */
 .navbar {
   background: white;   /* White background */
-  padding: 0.7rem 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  /* padding: 0.7rem 1rem; */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);a
 }
 
 .navbar-brand .logo {
